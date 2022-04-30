@@ -1,0 +1,77 @@
+---
+title: "Projeto de EStatística Computacional em R"
+author: "Carlos Alberto e Deivison Lima"
+date: "`r Sys.Date()`"
+output_dir: "."
+output:
+  prettydoc::html_pretty:
+    theme: Cayman
+    highlight: github
+---
+
+>Introdução
+
+Este projeto tem por objetivo realizar o Desafio Olist, que consiste em uma série de análise a serem realizadas com base nas informações geradas por meio de uma plataforma de e-commerce que transaciona os dados do varejo brasileiro. 
+
+O desafio é abordar as considerações pertinentes à questões de venda, características e mmeio onde os produtos, vendedores e clientes estão inseridos, com base nos dados fornecidos. Tais questões são pertinentes para análises qualitativas e quantitativas que venham a gerar resultados satisfatórios para tomada de decisões por parte da administração da Companhia.
+
+
+
+>>Base de Dados Utilizada
+
+1 - olist_customers_dataset -  Dados dos vendedores
+2 - olist_geolocation_dataset - Dados de geolocalização
+3 - olist_order_items_dataset - Dados de ordem de compra
+4 - olist_order_payments_dataset - Dados de pagamentos
+5 - olist_order_reviews_dataset - Dados de avaliações “reviews”
+6 - olist_orders_dataset - Dados de ordem de compras
+7 - olist_products_dataset - Dados dos Produtos
+8 - olist_sellers_dataset - Dados dos vendedores
+9 - product_category_name_translation - Categorias
+
+
+```{r, echo=FALSE}
+library(tidyverse)
+library(esquisse)
+library(readr)
+library(tibble)
+library(ggplot2)
+library(dplyr)
+library(shiny)
+library(tidyr)
+```
+
+
+> Desenvolvimento
+
+#Análise de mercado
+
+Dados dos vendedores <- olist_customers_dataset <- read.csv("~/GitHub/work-at-olist-data/datasets/olist_customers_dataset.csv")
+view(Dados dos vendedores)
+
+esquisser (olist_customers_dataset)
+
+
+#1 - Será que nossos diferentes lojistas associados conseguem manter o preço do mesmo produto sem grandes discrepâncias?
+
+
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
